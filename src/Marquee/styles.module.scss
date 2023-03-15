@@ -1,0 +1,42 @@
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.pauseOnHover:hover {
+  .content {
+    animation-play-state: paused;
+  }
+}
+
+.marquee {
+  position: relative;
+  display: flex;
+  // 给固定宽度
+  width: 100px;
+  overflow: hidden;
+
+  .content {
+    animation: marquee 5s infinite linear;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  .leftOverlay {
+    left: 0;
+    width: 200px;
+  }
+
+  .rightOverlay {
+    right: 0;
+    width: 200px;
+  }
+}
