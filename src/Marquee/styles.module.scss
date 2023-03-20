@@ -16,8 +16,6 @@
 .marquee {
   position: relative;
   display: flex;
-  // 给固定宽度
-  width: 100px;
   overflow: hidden;
 
   .content {
