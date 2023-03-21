@@ -18,7 +18,7 @@ function App() {
       <Marquee className={styles.marquee} startPlay={loadedImages >= imageList.length} delay={"1s"} direction={"right"}
                gradientColor={'#F8FBFD'}
                gradientWidth={200} pauseOnHover>
-        <div className={styles.imageList}> {imageList.map((item, index) => (
+        <div className={styles.imageList}> {imageList.map((item: string, index: number) => (
           <img src={item} key={index} onLoad={() => {
             setLoadedImages(num => num + 1)
           }
@@ -29,7 +29,7 @@ function App() {
       <h2>支持多语言</h2>
       <Marquee className={styles.marquee} delay={"1s"} direction={"left"} gradientColor={'#F8FBFD'}
                gradientWidth={200} pauseOnHover>
-        <div className={styles.textList}> {textList.map((item, index) => (
+        <div className={styles.textList}> {textList.map((item: string, index: number) => (
           <span className={styles.textItem} key={index}>{item}</span>
         ))}
         </div>
